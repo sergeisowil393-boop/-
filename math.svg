@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" width="320" height="150" role="img" aria-label="Иллюстрация: график функции, циркуль и знаки действий">
+  <defs>
+    <linearGradient id="bgM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDEDE5"/><stop offset="1" stop-color="#F3EBFA"/>
+    </linearGradient>
+    <linearGradient id="crv" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#7A3FB0"/><stop offset="1" stop-color="#E0617E"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="150" fill="url(#bgM)"/>
+  <circle cx="280" cy="34" r="30" fill="#fff" opacity=".42"/>
+  <g transform="translate(30 20)" opacity=".28" stroke="#7A3FB0" stroke-width="1.6">
+    <path d="M0 0v110M26 0v110M52 0v110M78 0v110M104 0v110M130 0v110M0 0h130M0 22h130M0 44h130M0 66h130M0 88h130M0 110h130"/>
+  </g>
+  <g transform="translate(30 20)">
+    <path d="M0 110h134M0 110V-2" stroke="#2A2230" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M0 104C26 48 44 22 66 22s42 32 66 82" stroke="url(#crv)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <circle cx="66" cy="22" r="7" fill="#FFFBF9" stroke="#D9457F" stroke-width="5"/>
+  </g>
+  <g transform="translate(206 30)" stroke="#7A3FB0" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M34 6 8 84M34 6l26 78"/>
+    <path d="M18 58c10 8 26 8 34 0" stroke="#D9457F" stroke-width="5"/>
+    <circle cx="34" cy="6" r="5" fill="#7A3FB0"/>
+  </g>
+  <g fill="#B0305F" font-family="Manrope,sans-serif" font-weight="800" font-size="22" opacity=".85">
+    <text x="186" y="36">π</text><text x="284" y="116">√</text><text x="188" y="126">×</text>
+  </g>
+</svg>

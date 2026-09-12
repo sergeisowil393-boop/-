@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" width="320" height="150" role="img" aria-label="Иллюстрация: раскрытая книга и перо">
+  <defs>
+    <linearGradient id="bgR" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCE9F1"/><stop offset="1" stop-color="#FDEDE5"/>
+    </linearGradient>
+    <linearGradient id="pen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A3FB0"/><stop offset="1" stop-color="#E0617E"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="150" fill="url(#bgR)"/>
+  <circle cx="40" cy="34" r="30" fill="#fff" opacity=".45"/>
+  <circle cx="286" cy="124" r="26" fill="#fff" opacity=".4"/>
+  <g transform="translate(36 28)">
+    <path d="M6 14c30-12 62-12 92 6v76c-30-18-62-18-92-6Z" fill="#FFFBF9" stroke="#B0305F" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M190 14c-30-12-62-12-92 6v76c30-18 62-18 92-6Z" fill="#FFFBF9" stroke="#B0305F" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M98 20v76" stroke="#B0305F" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#D9457F" stroke-width="3.4" stroke-linecap="round" opacity=".55">
+      <path d="M24 36h54M24 52h54M24 68h38M118 36h54M118 52h54M118 68h38"/>
+    </g>
+  </g>
+  <g transform="rotate(24 252 40)">
+    <path d="M252 8c18 10 24 34 14 58-4 10-12 18-22 22l-10-8c8-22 12-48 18-72Z" fill="url(#pen)"/>
+    <path d="M244 88l-8 22 20-12Z" fill="#2A2230"/>
+    <path d="M252 24c-4 22-8 44-14 62" stroke="#FFFBF9" stroke-width="3" stroke-linecap="round" opacity=".8" fill="none"/>
+  </g>
+</svg>

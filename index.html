@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дарья — репетитор по биологии, русскому языку и математике</title>
+<meta name="description" content="Дарья — репетитор со стажем 3 года. Биология, русский язык, математика. Подготовка к ЕГЭ, ОГЭ, ВПР и контрольным. Первое пробное занятие с диагностикой — бесплатно.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className = 'js';</script>
+<style>
+:root{
+  --milk:#FBF7F4;
+  --milk-2:#F6EEF1;
+  --card:#FFFCFB;
+  --ink:#2A2230;
+  --ink-soft:#6A6074;
+  --line:#EEE2E8;
+  --line-2:#E4D5DE;
+  --plum:#7A3FB0;
+  --plum-deep:#5E2C8C;
+  --pink:#D9457F;
+  --pink-deep:#B0305F;
+  --lilac-soft:#F3EBFA;
+  --pink-soft:#FCE9F1;
+  --peach-soft:#FDEDE5;
+  --grad:linear-gradient(118deg,#7A3FB0 0%,#B93E8F 58%,#E0617E 100%);
+  --r:18px;
+  --r-sm:12px;
+  --shadow:0 1px 2px rgba(42,34,48,.04), 0 14px 30px -20px rgba(42,34,48,.30);
+  --shadow-lift:0 2px 4px rgba(42,34,48,.05), 0 22px 40px -22px rgba(122,63,176,.38);
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--milk);color:var(--ink);
+  font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%}
+h1,h2,h3{font-family:'Bricolage Grotesque','Manrope',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:0}
+h1{font-size:clamp(32px,4.6vw,52px)}
+h2{font-size:clamp(25px,3vw,36px)}
+h3{font-size:18.5px;line-height:1.24;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:22px}
+section{padding-block:clamp(38px,4.4vw,58px)}
+.serif{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;letter-spacing:-.01em}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--pink-deep);margin-bottom:12px;
+}
+.eyebrow::before{content:"";width:20px;height:2px;border-radius:2px;background:var(--grad)}
+.lead{font-size:clamp(15.5px,1.35vw,17px);color:var(--ink-soft);max-width:60ch}
+
+/* --- decorative background --- */
+.blobs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.blob.b1{width:46vw;height:46vw;top:-14vw;right:-10vw;background:radial-gradient(circle,#E7B9D8 0%,rgba(231,185,216,0) 70%)}
+.blob.b2{width:40vw;height:40vw;top:38vh;left:-14vw;background:radial-gradient(circle,#CDB6EE 0%,rgba(205,182,238,0) 70%)}
+.blob.b3{width:34vw;height:34vw;bottom:-12vw;right:4vw;background:radial-gradient(circle,#F6CDB5 0%,rgba(246,205,181,0) 70%)}
+@media (prefers-reduced-motion: no-preference){
+  .blob{animation:drift 26s ease-in-out infinite alternate}
+  .blob.b2{animation-duration:34s;animation-delay:-8s}
+  .blob.b3{animation-duration:30s;animation-delay:-16s}
+}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3vw,4vh,0) scale(1.12)}}
+/* водяные знаки из логотипа */
+.marks{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.marks img{position:absolute;opacity:.055;filter:grayscale(.15)}
+.marks img:nth-child(1){width:150px;top:8vh;left:-30px;transform:rotate(-14deg)}
+.marks img:nth-child(2){width:96px;top:46vh;right:4vw;transform:rotate(12deg)}
+.marks img:nth-child(3){width:190px;bottom:-40px;left:22vw;transform:rotate(8deg);opacity:.045}
+.marks img:nth-child(4){width:74px;top:26vh;left:44vw;transform:rotate(-6deg);opacity:.05}
+.marks img:nth-child(5){width:120px;bottom:14vh;right:-24px;transform:rotate(-18deg)}
+@media (max-width:720px){.marks img:nth-child(n+4){display:none}}
+
+/* --- buttons --- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:inherit;font-size:15.5px;font-weight:700;text-decoration:none;
+  padding:13px 22px;border-radius:999px;border:1.5px solid transparent;
+  transition:transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.btn-primary{background-image:var(--grad);color:#FFFBF9;box-shadow:0 10px 22px -14px rgba(122,63,176,.9)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 28px -14px rgba(122,63,176,.85)}
+.btn-ghost{background:rgba(255,252,251,.7);color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--plum);color:var(--plum-deep)}
+.btn svg{flex:none}
+
+/* --- header --- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(251,247,244,.92);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;gap:18px;min-height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;min-width:0}
+.logo-img{width:36px;height:36px;flex:none;border-radius:11px;display:block}
+.logo-name{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;letter-spacing:-.025em}
+.logo-sub{display:block;font-size:11.5px;font-weight:600;color:var(--ink-soft);letter-spacing:.01em;line-height:1.3}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:14.5px;font-weight:600}
+.nav a{text-decoration:none;color:var(--ink-soft);transition:color .15s;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;border-radius:2px;background:var(--grad);transition:right .25s ease}
+.nav a:hover{color:var(--plum-deep)}
+.nav a:hover::after{right:0}
+.header-cta{flex:none;margin-left:auto}
+.nav + .header-cta{margin-left:2px}
+
+/* --- hero --- */
+.hero{padding-block:clamp(28px,3.4vw,44px) clamp(30px,3.6vw,46px)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(26px,4vw,52px);align-items:center}
+.hero h1{margin-bottom:16px}
+.hero .lead{max-width:54ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-note{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13.5px;color:var(--ink-soft)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--grad);flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.chip{font-size:13px;font-weight:700;padding:5px 13px;border-radius:999px;border:1px solid transparent}
+.chip--1{background:var(--lilac-soft);border-color:#E4D4F3;color:#5E2C8C}
+.chip--2{background:var(--pink-soft);border-color:#F5D3E2;color:#A32C5E}
+.chip--3{background:var(--peach-soft);border-color:#F7DCCC;color:#9C4E23}
+
+.hero-card{
+  position:relative;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--shadow);padding:24px;
+}
+.hero-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.35;pointer-events:none}
+.hero-card h2{font-size:18px;margin-bottom:3px}
+.hero-card > .lead{font-size:14px}
+.facts{list-style:none;margin:16px 0 0;padding:0}
+.facts li{display:flex;gap:13px;align-items:baseline;padding:11px 0;border-top:1px dashed var(--line-2)}
+.facts li:first-child{border-top:0;padding-top:2px}
+.fact-num{font-family:'Bricolage Grotesque',sans-serif;font-size:25px;font-weight:800;line-height:1;flex:none;min-width:80px;letter-spacing:-.035em}
+.fact-txt{font-size:14px;color:var(--ink-soft);line-height:1.42}
+
+/* --- generic cards --- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px;box-shadow:var(--shadow);
+  transition:transform .22s cubic-bezier(.2,.8,.3,1), box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--line-2)}
+.card--art{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card-art{position:relative;line-height:0;border-bottom:1px solid var(--line)}
+.card-art img,.card-art svg{width:100%;height:auto;display:block;transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.card--art:hover .card-art img,.card--art:hover .card-art svg{transform:scale(1.045)}
+.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card-body .card-meta{margin-top:auto;align-self:flex-start}
+.card-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.card-icon--1{background:var(--lilac-soft);color:var(--plum)}
+.card-icon--2{background:var(--pink-soft);color:var(--pink-deep)}
+.card-icon--3{background:var(--peach-soft);color:#9C4E23}
+.card h3{margin-bottom:7px}
+.card p{font-size:14.5px;color:var(--ink-soft)}
+.card-meta{
+  display:inline-block;margin-top:14px;padding:4px 11px;border-radius:999px;
+  background:var(--milk-2);font-size:12.5px;font-weight:700;color:var(--plum-deep);
+}
+
+/* --- about --- */
+.about{position:relative;background:linear-gradient(180deg,rgba(246,238,241,.8),rgba(246,238,241,.4));border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(26px,4vw,50px);align-items:start}
+.about-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.about-list li{
+  position:relative;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:17px 19px 17px 21px;overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.about-list li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.about-list li:hover{transform:translateX(3px);box-shadow:var(--shadow)}
+.about-list h3{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.about-list p{font-size:14.5px;color:var(--ink-soft)}
+
+/* --- results --- */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.result{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px 22px;box-shadow:var(--shadow);
+  transition:transform .22s cubic-bezier(.2,.8,.3,1), box-shadow .22s ease;
+}
+.result:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+.result strong{
+  display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:34px;font-weight:800;
+  line-height:1.02;margin-bottom:8px;letter-spacing:-.045em;
+}
+.result p{font-size:14.5px;color:var(--ink-soft)}
+
+/* --- steps --- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px 16px;margin-top:26px;counter-reset:step}
+.step{position:relative;padding-top:22px;border-top:2px solid var(--line-2)}
+.step::after{content:"";position:absolute;top:-2px;left:0;width:38%;height:2px;background:var(--grad);border-radius:2px}
+.step::before{
+  counter-increment:step;content:counter(step);
+  font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;line-height:1;color:#FFFBF9;
+  position:absolute;top:-13px;left:0;width:26px;height:26px;border-radius:50%;
+  background-image:var(--grad);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 4px var(--milk);
+}
+.step h3{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;letter-spacing:-.01em;margin:6px 0 5px}
+.step p{font-size:14px;color:var(--ink-soft)}
+
+/* --- prices --- */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.price{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.price-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.price-head h3{font-size:20px}
+.price-grade{font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--milk-2);color:var(--plum-deep)}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px;
+  padding:13px 0;border-bottom:1px dashed var(--line-2);
+}
+.price-list li:last-child{border-bottom:0;padding-bottom:0}
+.price-what{font-size:13.5px;color:var(--ink-soft);max-width:62%}
+.price-what b{display:block;color:var(--ink);font-weight:800;font-size:15px;letter-spacing:-.01em}
+.price-sum{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;white-space:nowrap;letter-spacing:-.035em}
+.price-trial{
+  grid-column:1 / -1;background-image:var(--grad);color:#FFFBF9;border:0;
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+  box-shadow:0 16px 34px -22px rgba(122,63,176,.95);
+}
+.price-trial h3{color:#FFFBF9;font-size:22px;margin-bottom:6px}
+.price-trial p{color:rgba(255,251,249,.92);font-size:14.5px;max-width:56ch}
+.price-trial .btn{background:#FFFBF9;color:var(--plum-deep);box-shadow:none}
+.price-trial .btn:hover{background:#fff;transform:translateY(-2px)}
+.price-note{margin-top:18px;font-size:13.5px;color:var(--ink-soft)}
+
+/* --- калькулятор --- */
+.calc{
+  margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;
+}
+.calc-fields{display:flex;flex-wrap:wrap;gap:14px 22px}
+.calc fieldset{border:0;margin:0;padding:0}
+.calc legend{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;padding:0}
+.seg{display:inline-flex;background:var(--milk-2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.seg label{display:block;cursor:pointer}
+.seg input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
+.seg span{display:block;padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--ink-soft);white-space:nowrap;transition:background-color .18s ease,color .18s ease}
+.seg input:checked + span{background:var(--card);color:var(--plum-deep);box-shadow:0 1px 3px rgba(42,34,48,.12)}
+.seg input:focus-visible + span{outline:2px solid var(--plum);outline-offset:2px}
+.seg label.is-off{opacity:.38;cursor:not-allowed}
+.calc-out{
+  text-align:right;padding-left:22px;border-left:1px dashed var(--line-2);min-width:186px;
+}
+.calc-out .cap{display:block;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft)}
+.calc-sum{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:34px;font-weight:800;letter-spacing:-.045em;line-height:1.1}
+.calc-month{display:block;margin-top:8px;font-size:13.5px;color:var(--ink-soft)}
+.calc-month b{color:var(--ink);font-weight:800}
+.calc-hint{flex:0 0 100%;margin:0;font-size:12.5px;color:var(--ink-soft)}
+
+/* --- FAQ --- */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-top:24px;align-items:start}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:2px 18px;transition:box-shadow .2s ease,border-color .2s ease}
+.faq-item[open]{box-shadow:var(--shadow);border-color:var(--line-2)}
+.faq-item summary{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:15px 0;font-size:15.5px;font-weight:800;letter-spacing:-.01em;cursor:pointer;list-style:none;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"";flex:none;width:20px;height:20px;border-radius:50%;background-image:var(--grad);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 5v10M5 10h10' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 5v10M5 10h10' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition:transform .25s ease;
+}
+.faq-item[open] summary::after{transform:rotate(135deg)}
+.faq-item summary:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:6px}
+.faq-answer{font-size:14.5px;color:var(--ink-soft);padding:0 0 16px}
+
+/* --- cta --- */
+.cta-outer{padding-bottom:clamp(38px,4.4vw,58px)}
+.cta{
+  position:relative;overflow:hidden;background:var(--ink);color:#F6F1F4;
+  border-radius:24px;padding:clamp(30px,3.6vw,44px) clamp(22px,4vw,44px);text-align:center;
+}
+.cta::before{content:"";position:absolute;width:60%;height:160%;left:-10%;top:-40%;background:radial-gradient(circle,rgba(160,80,190,.42) 0%,rgba(160,80,190,0) 65%)}
+.cta::after{content:"";position:absolute;width:55%;height:150%;right:-12%;bottom:-45%;background:radial-gradient(circle,rgba(224,97,126,.36) 0%,rgba(224,97,126,0) 65%)}
+.cta > *{position:relative}
+.cta h2{color:#FFFBF9;margin-bottom:12px}
+.cta p{color:#C3B9C7;max-width:50ch;margin:0 auto}
+.tg-link{
+  display:inline-block;margin-top:22px;font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(26px,3.6vw,38px);font-weight:800;color:#FFFBF9;text-decoration:none;letter-spacing:-.04em;
+}
+.tg-link:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-skip-ink:none}
+.cta-btn-row{margin-top:22px;margin-bottom:26px}
+.cta .btn-primary{background:#FFFBF9;color:var(--plum-deep);background-image:none;box-shadow:0 12px 26px -16px rgba(0,0,0,.9)}
+.cta .btn-primary:hover{background:#fff}
+.cta-small{font-size:13.5px;color:#A79CAC}
+
+/* --- footer --- */
+.site-footer{border-top:1px solid var(--line);padding-block:24px;font-size:13.5px;color:var(--ink-soft)}
+.footer-inner{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;align-items:center}
+.site-footer a{color:var(--plum-deep);font-weight:700}
+
+/* --- reveal --- */
+.js .reveal{opacity:0;transform:translateY(16px)}
+.js .reveal.is-visible{opacity:1;transform:none;transition:opacity .55s ease, transform .55s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn:hover,.card:hover,.result:hover,.about-list li:hover{transform:none}
+}
+
+/* --- adaptive --- */
+@media (max-width:980px){
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .cards,.results{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+}
+@media (max-width:860px){
+  .calc{grid-template-columns:1fr}
+  .calc-out{text-align:left;padding-left:0;padding-top:16px;border-left:0;border-top:1px dashed var(--line-2)}
+  .faq{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .wrap{padding-inline:18px}
+  .cards,.results,.price-grid,.steps{grid-template-columns:1fr}
+  .price-trial{grid-template-columns:1fr;text-align:left}
+  .price-what{max-width:100%}
+  .blob{filter:blur(50px);opacity:.42}
+}
+@media (max-width:560px){
+  .logo-sub{display:none}
+  .logo-img{width:33px;height:33px}
+  .header-inner{min-height:60px;gap:12px}
+}
+@media (max-width:480px){
+  .header-cta .btn{padding:10px 15px;font-size:14.5px}
+  .hero-actions .btn{width:100%}
+  .fact-num{min-width:70px;font-size:23px}
+  .price,.card,.hero-card{padding:19px}
+}
+</style>
+</head>
+<body>
+
+<div class="blobs" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+</div>
+<div class="marks" aria-hidden="true">
+  <img src="logo.svg" alt=""><img src="logo.svg" alt=""><img src="logo.svg" alt="">
+  <img src="logo.svg" alt=""><img src="logo.svg" alt="">
+</div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <img class="logo-img" src="logo.svg" alt="" width="36" height="36">
+      <span>
+        <span class="logo-name">Дарья</span>
+        <span class="logo-sub">биология · русский · математика</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#subjects">Предметы</a>
+      <a href="#about">Обо мне</a>
+      <a href="#results">Результаты</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-primary" href="https://t.me/mavka_ria" target="_blank" rel="noopener">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="chips">
+          <span class="chip chip--1">Биология</span>
+          <span class="chip chip--2">Русский язык</span>
+          <span class="chip chip--3">Математика</span>
+        </div>
+        <h1>Репетитор, с которым ребёнку <span class="serif grad-text">не страшно ошибаться</span></h1>
+        <p class="lead">Меня зовут Дарья. Три года готовлю школьников к ЕГЭ, ОГЭ, ВПР и контрольным — и подтягиваю текущую программу, если оценки просели. Учусь на педагога, прошла курсы по психологии и развитию, поэтому нахожу контакт даже с теми, кто «ненавидит этот предмет».</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://t.me/mavka_ria" target="_blank" rel="noopener">Записаться на бесплатное занятие</a>
+          <a class="btn btn-ghost" href="#prices">Цены</a>
+        </div>
+        <p class="hero-note"><span class="dot" aria-hidden="true"></span>Первое занятие — диагностика 30–35 минут, бесплатно и без обязательств.</p>
+      </div>
+
+      <aside class="hero-card reveal">
+        <h2>Коротко обо мне</h2>
+        <p class="lead">Факты, которые родители спрашивают в первом сообщении.</p>
+        <ul class="facts">
+          <li><span class="fact-num grad-text">3 года</span><span class="fact-txt">опыта преподавания и своя выстроенная методика</span></li>
+          <li><span class="fact-num grad-text">80–90</span><span class="fact-txt">баллов — мой результат ЕГЭ по преподаваемым предметам</span></li>
+          <li><span class="fact-num grad-text">2 мес.</span><span class="fact-txt">достаточно, чтобы поднять уровень знаний с двойки до четвёрки</span></li>
+          <li><span class="fact-num grad-text">4 и 5</span><span class="fact-txt">оценки, с которыми мои ученики заканчивали год</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <div class="wrap">
+      <p class="eyebrow reveal">Предметы</p>
+      <h2 class="reveal">Три предмета, в каждом — <span class="serif grad-text">до результата</span></h2>
+      <p class="lead reveal" style="margin-top:12px">Готовлю к экзаменам и веду школьную программу. Формат занятия подбираем под задачу: разбор тем, тренировка формата экзамена или помощь с текущими контрольными.</p>
+      <div class="cards">
+        <article class="card card--art reveal">
+          <div class="card-art">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#F3EBFA"/><stop offset="1" stop-color="#FCE9F1"/>
+                </linearGradient>
+                <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#9B5CC8"/><stop offset="1" stop-color="#D9457F"/>
+                </linearGradient>
+              </defs>
+              <rect width="320" height="150" fill="url(#bgB)"/>
+              <circle cx="268" cy="28" r="32" fill="#fff" opacity=".45"/>
+              <circle cx="46" cy="124" r="24" fill="#fff" opacity=".4"/>
+            
+              <g transform="translate(186 22)">
+                <path d="M52 6C80 24 82 74 40 104 -2 74 0 24 28 6c4-3 8-4 12-5 4 1 8 2 12 5Z" fill="url(#lf)" opacity=".92"/>
+                <path d="M40 8v96" stroke="#FFFBF9" stroke-width="3" stroke-linecap="round"/>
+                <g stroke="#FFFBF9" stroke-width="2.3" stroke-linecap="round" opacity=".85">
+                  <path d="M40 34 19 23M40 34l21-11M40 58 16 45M40 58l24-13M40 80 22 69M40 80l18-11"/>
+                </g>
+              </g>
+            
+              <g transform="translate(52 16)">
+                <g fill="none" stroke="#7A3FB0" stroke-width="6" stroke-linecap="round">
+                  <path d="M30 2C62 20 62 44 30 60 -2 76 -2 100 30 118"/>
+                  <path d="M30 2C-2 20 -2 44 30 60 62 76 62 100 30 118"/>
+                </g>
+                <g stroke="#D9457F" stroke-width="4.4" stroke-linecap="round">
+                  <path d="M14 17h32M7 30h46M14 44h32M14 76h32M7 90h46M14 104h32"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Биология</h3>
+            <p>ЕГЭ, ОГЭ и школьная программа: ботаника, зоология, анатомия, генетика и задачи. Учим не зубрить, а понимать логику процессов.</p>
+            <p class="card-meta">8–11 классы</p>
+          </div>
+        </article>
+        <article class="card card--art reveal">
+          <div class="card-art">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="bgR" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FCE9F1"/><stop offset="1" stop-color="#FDEDE5"/>
+                </linearGradient>
+                <linearGradient id="pen" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#7A3FB0"/><stop offset="1" stop-color="#E0617E"/>
+                </linearGradient>
+              </defs>
+              <rect width="320" height="150" fill="url(#bgR)"/>
+              <circle cx="40" cy="34" r="30" fill="#fff" opacity=".45"/>
+              <circle cx="286" cy="124" r="26" fill="#fff" opacity=".4"/>
+              <g transform="translate(36 28)">
+                <path d="M6 14c30-12 62-12 92 6v76c-30-18-62-18-92-6Z" fill="#FFFBF9" stroke="#B0305F" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M190 14c-30-12-62-12-92 6v76c30-18 62-18 92-6Z" fill="#FFFBF9" stroke="#B0305F" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M98 20v76" stroke="#B0305F" stroke-width="4" stroke-linecap="round"/>
+                <g stroke="#D9457F" stroke-width="3.4" stroke-linecap="round" opacity=".55">
+                  <path d="M24 36h54M24 52h54M24 68h38M118 36h54M118 52h54M118 68h38"/>
+                </g>
+              </g>
+              <g transform="rotate(24 252 40)">
+                <path d="M252 8c18 10 24 34 14 58-4 10-12 18-22 22l-10-8c8-22 12-48 18-72Z" fill="url(#pen)"/>
+                <path d="M244 88l-8 22 20-12Z" fill="#2A2230"/>
+                <path d="M252 24c-4 22-8 44-14 62" stroke="#FFFBF9" stroke-width="3" stroke-linecap="round" opacity=".8" fill="none"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Русский язык</h3>
+            <p>Орфография, пунктуация, сочинение и изложение. Разбираем правила до автоматизма и закрываем пробелы, которые тянутся с младших классов.</p>
+            <p class="card-meta">1–11 классы</p>
+          </div>
+        </article>
+        <article class="card card--art reveal">
+          <div class="card-art">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="bgM" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FDEDE5"/><stop offset="1" stop-color="#F3EBFA"/>
+                </linearGradient>
+                <linearGradient id="crv" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#7A3FB0"/><stop offset="1" stop-color="#E0617E"/>
+                </linearGradient>
+              </defs>
+              <rect width="320" height="150" fill="url(#bgM)"/>
+              <circle cx="280" cy="34" r="30" fill="#fff" opacity=".42"/>
+              <g transform="translate(30 20)" opacity=".28" stroke="#7A3FB0" stroke-width="1.6">
+                <path d="M0 0v110M26 0v110M52 0v110M78 0v110M104 0v110M130 0v110M0 0h130M0 22h130M0 44h130M0 66h130M0 88h130M0 110h130"/>
+              </g>
+              <g transform="translate(30 20)">
+                <path d="M0 110h134M0 110V-2" stroke="#2A2230" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M0 104C26 48 44 22 66 22s42 32 66 82" stroke="url(#crv)" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <circle cx="66" cy="22" r="7" fill="#FFFBF9" stroke="#D9457F" stroke-width="5"/>
+              </g>
+              <g transform="translate(206 30)" stroke="#7A3FB0" stroke-width="6" stroke-linecap="round" fill="none">
+                <path d="M34 6 8 84M34 6l26 78"/>
+                <path d="M18 58c10 8 26 8 34 0" stroke="#D9457F" stroke-width="5"/>
+                <circle cx="34" cy="6" r="5" fill="#7A3FB0"/>
+              </g>
+              <g fill="#B0305F" font-family="Manrope,sans-serif" font-weight="800" font-size="22" opacity=".85">
+                <text x="186" y="36">π</text><text x="284" y="116">√</text><text x="188" y="126">×</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Математика</h3>
+            <p>От счёта и таблицы умножения до профильных задач экзамена. Идём от того, что ребёнок реально знает, а не от того, что «должен был усвоить».</p>
+            <p class="card-meta">1–11 классы</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">Обо мне</p>
+        <h2>Опыт, методика и умение <span class="serif grad-text">говорить с детьми</span></h2>
+        <p class="lead" style="margin-top:12px">Я не только объясняю предмет. Большая часть работы — вернуть ребёнку ощущение, что он способен разобраться. Без этого не работает ни одна методика.</p>
+      </div>
+      <ul class="about-list">
+        <li class="reveal">
+          <h3>Три года практики</h3>
+          <p>Накопились рабочие приёмы под каждый тип ученика: кому-то нужна структура и план, кому-то — разговор и примеры из жизни.</p>
+        </li>
+        <li class="reveal">
+          <h3>Курсы по психологии и развитию</h3>
+          <p>Помогают снимать тревогу перед экзаменом, удерживать внимание и находить общий язык с подростками и младшеклассниками.</p>
+        </li>
+        <li class="reveal">
+          <h3>Педагогическое образование</h3>
+          <p>Учусь на педагога — методика у меня не интуитивная, а осознанная: понимаю, как выстраивать материал от простого к сложному.</p>
+        </li>
+        <li class="reveal">
+          <h3>Личный результат ЕГЭ — 80–90 баллов</h3>
+          <p>Я прошла экзамен сама и знаю его изнутри: где теряются баллы, какие формулировки ждут проверяющие, что стоит тренировать.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <p class="eyebrow reveal">Результаты учеников</p>
+      <h2 class="reveal">Что получается <span class="serif grad-text">на практике</span></h2>
+      <div class="results">
+        <article class="result reveal">
+          <strong class="grad-text">с 2 до 4</strong>
+          <p>За два месяца занятий поднимаем уровень знаний с двойки до стабильной четвёрки.</p>
+        </article>
+        <article class="result reveal">
+          <strong class="grad-text">4 и 5</strong>
+          <p>Ученики заканчивают учебный год на четвёрки и пятёрки по предмету, с которым мы работали.</p>
+        </article>
+        <article class="result reveal">
+          <strong class="grad-text">ОГЭ на 4–5</strong>
+          <p>Экзамен сдают на четыре и пять — разбираем формат заранее, чтобы на самом ОГЭ не было сюрпризов.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="eyebrow reveal">Как начинаем</p>
+      <h2 class="reveal">Первое занятие — <span class="serif grad-text">бесплатное</span></h2>
+      <p class="lead reveal" style="margin-top:12px">Оно нужно, чтобы понять реальный уровень и договориться о плане. Никаких обязательств: не подойдём друг другу — просто разойдёмся.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>Пишете в Telegram</h3>
+          <p>Рассказываете, какой предмет, класс и что беспокоит: экзамен, оценки или пробелы в теме.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Диагностика 30–35 минут</h3>
+          <p>Бесплатное пробное занятие: смотрю, что ребёнок знает, где провалы и как ему удобнее воспринимать материал.</p>
+        </div>
+        <div class="step reveal">
+          <h3>План подготовки</h3>
+          <p>Говорю честно, сколько времени займёт результат, и предлагаю программу под вашу цель.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Регулярные занятия</h3>
+          <p>Занимаемся индивидуально или в мини-группе, с домашними заданиями и обратной связью по прогрессу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="eyebrow reveal">Стоимость</p>
+      <h2 class="reveal">Цены на занятия</h2>
+      <p class="lead reveal" style="margin-top:12px">Индивидуально и в мини-группах по 2–3 человека. Часа хватает на разбор темы, полутора — на полноценную подготовку к экзамену.</p>
+      <div class="price-grid">
+        <article class="price reveal">
+          <div class="price-head">
+            <h3>Русский язык и математика</h3>
+            <span class="price-grade">1–11 классы</span>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-what"><b>Индивидуально</b>60 минут</span><span class="price-sum grad-text">1000 ₽</span></li>
+            <li><span class="price-what"><b>Индивидуально</b>90 минут</span><span class="price-sum grad-text">1500 ₽</span></li>
+            <li><span class="price-what"><b>Мини-группа 2–3 человека</b>90 минут</span><span class="price-sum grad-text">1200 ₽</span></li>
+          </ul>
+        </article>
+        <article class="price reveal">
+          <div class="price-head">
+            <h3>Биология</h3>
+            <span class="price-grade">8–11 классы</span>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-what"><b>Индивидуально</b>60 минут</span><span class="price-sum grad-text">1200 ₽</span></li>
+            <li><span class="price-what"><b>Индивидуально</b>90 минут</span><span class="price-sum grad-text">1800 ₽</span></li>
+            <li><span class="price-what"><b>Мини-группа 2–3 человека</b>90 минут</span><span class="price-sum grad-text">1500 ₽</span></li>
+          </ul>
+        </article>
+        <article class="price price-trial reveal">
+          <div>
+            <h3>Пробное занятие — бесплатно</h3>
+            <p>Диагностика знаний 30–35 минут: определяем уровень, обсуждаем цель и составляем план. Оплата только со второго занятия.</p>
+          </div>
+          <a class="btn" href="https://t.me/mavka_ria" target="_blank" rel="noopener">Записаться</a>
+        </article>
+      </div>
+      <div class="calc reveal">
+        <div class="calc-fields">
+          <fieldset>
+            <legend>Предмет</legend>
+            <div class="seg">
+              <label><input type="radio" name="calc-subj" value="rus" checked><span>Русский / математика</span></label>
+              <label><input type="radio" name="calc-subj" value="bio"><span>Биология</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Формат</legend>
+            <div class="seg">
+              <label><input type="radio" name="calc-form" value="solo" checked><span>Индивидуально</span></label>
+              <label><input type="radio" name="calc-form" value="group"><span>Мини-группа</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Длительность</legend>
+            <div class="seg">
+              <label id="calc-60-label"><input type="radio" name="calc-dur" value="60" checked><span>60 минут</span></label>
+              <label><input type="radio" name="calc-dur" value="90"><span>90 минут</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Занятий в неделю</legend>
+            <div class="seg">
+              <label><input type="radio" name="calc-week" value="1"><span>1</span></label>
+              <label><input type="radio" name="calc-week" value="2" checked><span>2</span></label>
+              <label><input type="radio" name="calc-week" value="3"><span>3</span></label>
+            </div>
+          </fieldset>
+          <p class="calc-hint" id="calc-hint">Мини-группа 2–3 человека занимается по 90 минут.</p>
+        </div>
+        <div class="calc-out" aria-live="polite">
+          <span class="cap">Одно занятие</span>
+          <strong class="calc-sum grad-text" id="calc-lesson">1000 ₽</strong>
+          <span class="calc-month">В месяц примерно <b id="calc-month">8000 ₽</b></span>
+        </div>
+      </div>
+      <p class="price-note reveal">Подготовка к ЕГЭ, ОГЭ, ВПР и контрольным — по этим же ценам, отдельной наценки за экзамен нет. Расчёт за месяц — ориентировочный, из четырёх учебных недель.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <p class="eyebrow reveal">Частые вопросы</p>
+      <h2 class="reveal">О чём обычно <span class="serif grad-text">спрашивают родители</span></h2>
+      <div class="faq">
+        <details class="faq-item reveal">
+          <summary>С какого класса вы занимаетесь?</summary>
+          <p class="faq-answer">Русский язык и математику веду с 1 по 11 класс, биологию — с 8 по 11. Программу подбираю под конкретный класс и учебник, по которому занимается ребёнок.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Как проходит первое занятие?</summary>
+          <p class="faq-answer">Это бесплатная диагностика на 30–35 минут. Я смотрю, что ребёнок уже знает, где пробелы и как ему удобнее воспринимать материал, а после рассказываю, сколько времени займёт результат, и предлагаю план.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Чем занятие на 60 минут отличается от 90?</summary>
+          <p class="faq-answer">Часа хватает, чтобы разобрать одну тему и закрепить её. Полтора часа берут, когда идёт подготовка к экзамену: успеваем и теорию, и разбор заданий в формате ЕГЭ или ОГЭ.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Сколько человек в мини-группе?</summary>
+          <p class="faq-answer">Два или три. Занятие длится 90 минут и стоит дешевле индивидуального, при этом внимания хватает каждому — больше трёх человек я не беру.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>К каким экзаменам и работам готовите?</summary>
+          <p class="faq-answer">К ЕГЭ, ОГЭ, ВПР и школьным контрольным. Отдельной наценки за подготовку к экзамену нет — цена та же, что за обычное занятие.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Ребёнок сильно отстал. Это можно исправить?</summary>
+          <p class="faq-answer">Да, и обычно быстрее, чем кажется. За два месяца регулярных занятий уровень знаний поднимается с двойки до стабильной четвёрки — начинаем с того, что ребёнок реально знает, и закрываем пробелы по порядку.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="cta-outer">
+    <div class="wrap">
+      <div class="cta reveal">
+        <h2>Давайте начнём с бесплатного занятия</h2>
+        <p>Напишите в Telegram, какой предмет и класс — подберём удобное время для диагностики.</p>
+        <div><a class="tg-link" href="https://t.me/mavka_ria" target="_blank" rel="noopener">@mavka_ria</a></div>
+        <div class="cta-btn-row">
+          <a class="btn btn-primary" href="https://t.me/mavka_ria" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+        <p class="cta-small">Биология · Русский язык · Математика — ЕГЭ, ОГЭ, ВПР и школьная программа</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Дарья — репетитор по биологии, русскому языку и математике</span>
+    <span>Telegram: <a href="https://t.me/mavka_ria" target="_blank" rel="noopener">@mavka_ria</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    document.documentElement.className = 'no-js';
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, {rootMargin: '0px 0px -8% 0px', threshold: 0.08});
+  document.querySelectorAll('.reveal').forEach(function(el, i){
+    el.style.transitionDelay = (Math.min(i % 4, 3) * 65) + 'ms';
+    io.observe(el);
+  });
+})();
+
+/* калькулятор стоимости */
+(function(){
+  var PRICE = {
+    rus: {solo: {60: 1000, 90: 1500}, group: {90: 1200}},
+    bio: {solo: {60: 1200, 90: 1800}, group: {90: 1500}}
+  };
+  var lessonEl = document.getElementById('calc-lesson');
+  var monthEl  = document.getElementById('calc-month');
+  var hintEl   = document.getElementById('calc-hint');
+  var label60  = document.getElementById('calc-60-label');
+  if (!lessonEl) return;
+
+  function val(name){
+    var el = document.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : null;
+  }
+  function money(n){ return n.toLocaleString('ru-RU') + ' \u20BD'; }
+
+  function update(){
+    var form = val('calc-form');
+    var input60 = document.querySelector('input[name="calc-dur"][value="60"]');
+    var input90 = document.querySelector('input[name="calc-dur"][value="90"]');
+    var group = form === 'group';
+
+    input60.disabled = group;
+    label60.classList.toggle('is-off', group);
+    if (group && input60.checked) input90.checked = true;
+
+    var dur = val('calc-dur');
+    var price = PRICE[val('calc-subj')][form][dur];
+    var perWeek = parseInt(val('calc-week'), 10);
+
+    lessonEl.textContent = money(price);
+    monthEl.textContent = money(price * perWeek * 4);
+    hintEl.textContent = group
+      ? 'Мини-группа 2\u20133 человека занимается по 90 минут.'
+      : 'Длительность выбираете вы: час на разбор темы, полтора \u2014 на подготовку к экзамену.';
+  }
+
+  document.querySelectorAll('.calc input').forEach(function(el){
+    el.addEventListener('change', update);
+  });
+  update();
+})();
+</script>
+</body>
+</html>

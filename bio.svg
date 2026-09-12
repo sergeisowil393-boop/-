@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" width="320" height="150" role="img" aria-label="Иллюстрация: лист и спираль ДНК">
+  <defs>
+    <linearGradient id="bgB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3EBFA"/><stop offset="1" stop-color="#FCE9F1"/>
+    </linearGradient>
+    <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9B5CC8"/><stop offset="1" stop-color="#D9457F"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="150" fill="url(#bgB)"/>
+  <circle cx="268" cy="28" r="32" fill="#fff" opacity=".45"/>
+  <circle cx="46" cy="124" r="24" fill="#fff" opacity=".4"/>
+
+  <g transform="translate(186 22)">
+    <path d="M52 6C80 24 82 74 40 104 -2 74 0 24 28 6c4-3 8-4 12-5 4 1 8 2 12 5Z" fill="url(#lf)" opacity=".92"/>
+    <path d="M40 8v96" stroke="#FFFBF9" stroke-width="3" stroke-linecap="round"/>
+    <g stroke="#FFFBF9" stroke-width="2.3" stroke-linecap="round" opacity=".85">
+      <path d="M40 34 19 23M40 34l21-11M40 58 16 45M40 58l24-13M40 80 22 69M40 80l18-11"/>
+    </g>
+  </g>
+
+  <g transform="translate(52 16)">
+    <g fill="none" stroke="#7A3FB0" stroke-width="6" stroke-linecap="round">
+      <path d="M30 2C62 20 62 44 30 60 -2 76 -2 100 30 118"/>
+      <path d="M30 2C-2 20 -2 44 30 60 62 76 62 100 30 118"/>
+    </g>
+    <g stroke="#D9457F" stroke-width="4.4" stroke-linecap="round">
+      <path d="M14 17h32M7 30h46M14 44h32M14 76h32M7 90h46M14 104h32"/>
+    </g>
+  </g>
+</svg>
